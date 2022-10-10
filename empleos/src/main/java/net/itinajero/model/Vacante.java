@@ -99,8 +99,7 @@ public class Vacante {
 				+ ", detalles=" + detalles + ", categoria=" + categoria + "]";
 	}
 	public void reset() {
-		// TODO Auto-generated method stub
-		
+		this.imagen=null;
 	}
 
 

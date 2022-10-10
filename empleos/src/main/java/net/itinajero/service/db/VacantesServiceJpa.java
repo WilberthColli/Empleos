@@ -52,14 +52,12 @@ public class VacantesServiceJpa implements IVacantesService {
 
 	@Override
 	public List<Vacante> BuscarbyExample(Example<Vacante> Example) {
-		// TODO Auto-generated method stub
-		return null;
+		return vacantesRepo.findAll(Example);
 	}
 
 	@Override
 	public Page<Vacante> buscarTodas(Pageable page) {
-		// TODO Auto-generated method stub
-		return null;
+		return vacantesRepo.findAll(page);
 	}
 
 }
