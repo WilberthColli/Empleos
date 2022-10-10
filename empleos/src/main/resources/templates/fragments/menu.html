@@ -6,17 +6,27 @@
 
   <div class="collapse navbar-collapse" id="navbarsExampleDefault">
     <ul class="navbar-nav mr-auto">
+      <!-- configuramos la url para mostrar las vacantes -->
       <li class="nav-item">
-        <a class="nav-link" th:href="@{/vacantes/index}">Vacantes</a>
+        <a class="nav-link" th:href="@{/vacantes/indexPaginate}">Vacantes</a>
       </li>
+      
+      <!-- configuramos la url para mostrar las categorias -->
       <li class="nav-item">
-        <a class="nav-link" th:href="@{/categorias/index}">Categorias</a>
+        <a class="nav-link" th:href="@{/categorias/indexPaginate}">Categorias</a>
       </li>
+      
+      <!-- configuramos la url para mostrar los usuarios -->
       <li class="nav-item">
-        <a class="nav-link" href="#">Menu 2</a>
+        <a class="nav-link" th:href="@{/usuarios/index}">Usuarios</a>
       </li>          
     </ul>  
     <a class="btn btn-primary" href="#">Ingresar</a>&nbsp;
-    <a class="btn btn-primary" href="#">Registrarse</a>
+    
+    <!-- Boton para registrar un usuario -->
+     <a class="btn btn-primary" th:href="@{/signup}">Registrarse</a>&nbsp;
+     
+     <!-- boton para cerrar sesion del usuario -->
+     <a class="btn btn-primary" th:href="@{/logout}">Salir</a>&nbsp;
   </div>
 </nav>

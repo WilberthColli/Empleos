@@ -98,6 +98,11 @@ public class Vacante {
 				+ ", salario=" + salario + ", destacado=" + destacado + ", imagen=" + imagen + ", estatus=" + estatus
 				+ ", detalles=" + detalles + ", categoria=" + categoria + "]";
 	}
+	public void reset() {
+		// TODO Auto-generated method stub
+		
+	}
+
 
 	
 	
