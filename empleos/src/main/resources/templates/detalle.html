@@ -11,18 +11,13 @@
     <!-- Bootstrap core CSS -->
     <link th:href="@{/bootstrap/css/bootstrap.min.css}" rel="stylesheet">
     <!-- Custom styles for this template -->
-    <link th:href="@{/bootstrap/css/jumbotron.css}" rel="stylesheet}">
-    <link th:href="@{/bootstrap/css/sticky-footer-navbar.css}" rel="stylesheet}">
+    <link th:href="@{/bootstrap/css/jumbotron.css}" rel="stylesheet">
+    <link th:href="@{/bootstrap/css/sticky-footer-navbar.css}" rel="stylesheet">
   </head>
 
   <body>
 
-     <header th:insert="fragments/menu :: menu-principal">
-      
-    </header>
-    
-    <br>
-    <br>
+    <header th:insert="fragments/menu :: menu-principal"></header>
 
     <main role="main">
       <hr>
@@ -44,7 +39,9 @@
                 <div class="card bg-light mb-3" >
                   <div class="card-body">
                     <h5 class="card-title">Detalles de la oferta de trabajo</h5>
-                    <p class="card-text" th:utext=${vacante.detalles}></p>
+                    <!-- agregamos los detalles a la vista -->
+                    <!-- la expresion utext le dice a thymeleaf q interprete las etiquetas html como codigo html -->
+                    <p class="card-text" th:utext="${vacante.detalles}"> </p>
                   </div>
                 </div>   
                 <a class="btn btn-primary" href="#" role="button" title="Quiero aplicar para esta oferta de trabajo."><i class="fas fa-file" aria-hidden="true"></i> Aplicar</a>                            
@@ -56,9 +53,7 @@
       </div>
     </main>
 
-    <footer th:insert="fragments/footer :: pie-pagina" class="footer">
-      
-    </footer>
+    <footer th:insert="fragments/footer :: pie-pagina" class="footer"></footer>
 
     <!-- Bootstrap core JavaScript
     ================================================== -->

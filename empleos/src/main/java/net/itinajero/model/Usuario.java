@@ -16,10 +16,12 @@ import javax.persistence.JoinTable;
 import javax.persistence.ManyToMany;
 import javax.persistence.Table;
 
+//esta entidad se mapea a la tabla usuarios
 @Entity
 @Table(name = "Usuarios")
 public class Usuario {
 
+	// aquí se declara la llave primaria
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // auto_increment MySQL
 	private Integer id;
@@ -29,17 +31,24 @@ public class Usuario {
 	private String password;
 	private Integer estatus;	
 	private Date fechaRegistro;
-	@ManyToMany(fetch=FetchType.EAGER) //Configuracion muchos a muchos
+	
+	// aquí configuramos la relacion de muchos a muchos entre usuarios y perfiles
+	@ManyToMany(fetch=FetchType.EAGER)
 	@JoinTable(name="UsuarioPerfil",
-			   joinColumns = @JoinColumn(name="idUsuario"), //muy importante el orden la primera llave forane debe ser la clase como en este caso
+			   joinColumns = @JoinColumn(name="idUsuario"),
 			   inverseJoinColumns = @JoinColumn(name="idPerfil")			
 			)
+	
+	// atributo que crea una lista de perfiles
 	private List<Perfil> perfiles;
 	
+	// metodo para agregar un perfil a un usuario
 	public void agregar(Perfil tempPerfil) {
+		// se condiciona si perfil es nulo, se crea una nueva lista enlasada
 		if (perfiles == null) {
 			perfiles = new LinkedList<Perfil>();
 		}
+		// si perfil no es nulo se manda a llamar a esta lista
 		perfiles.add(tempPerfil);
 	}
 

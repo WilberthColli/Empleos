@@ -124,7 +124,7 @@ public class HomeController {
 		vacanteSearch.reset();
 		// aqui estamos agregando la clase SERVICEVACANTES la cual al mismo tiempo
 		// busca a las vacantes destacadas
-	 	model.addAttribute("vacantes", serviceVacantes.buscarDestacadas());
+		model.addAttribute("vacantes", serviceVacantes.buscarDestacadas());
 		model.addAttribute("categorias", serviceCategorias.buscarTodas());
 		model.addAttribute("search", vacanteSearch);
 	}

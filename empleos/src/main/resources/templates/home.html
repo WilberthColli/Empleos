@@ -31,7 +31,8 @@
               <option th:value="${null}" selected>Seleccione una categoría</option>
               <option th:each="categoria : ${categorias}"
                       th:value="${categoria.id}"
-                      th:text="${categoria.nombre}"></option>
+                      th:text="${categoria.nombre}"
+              >Ventas</option>
               
             </select>&nbsp;
             <button type="submit" class="btn btn-primary mb-3">Buscar</button>

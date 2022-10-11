@@ -15,4 +15,5 @@ public interface ICategoriasService {
 	void eliminar(Integer idCategoria);	
 	List<Categoria> buscarByExample(Example<Categoria> example);
 	Page<Categoria>buscarTodas(Pageable page);
+	
 }

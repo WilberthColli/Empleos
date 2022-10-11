@@ -1,12 +1,10 @@
 package net.itinajero.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
-import org.springframework.data.repository.CrudRepository;
-
 import net.itinajero.model.Categoria;
 
-//Repositorio es una interfas q extiende una interfas de un repositorio con los principalees metodos de crud
+//en esta parte se van a agregar nuevas metodos adicionales
 //public interface CategoriasRepository extends CrudRepository<Categoria, Integer> {
 public interface CategoriasRepository extends JpaRepository<Categoria, Integer> {
-
+		
 }

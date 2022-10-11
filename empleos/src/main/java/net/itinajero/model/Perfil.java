@@ -6,10 +6,12 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+//esta entidad se mapea a la tabla perfiles
 @Entity
 @Table(name = "Perfiles")
 public class Perfil {
 
+	// aquí se configura la llave primaria
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY) // auto_increment MySQL
 	private Integer id;
