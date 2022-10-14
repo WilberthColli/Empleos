@@ -11,6 +11,7 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.config.annotation.web.configuration.WebSecurityConfigurerAdapter;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
+import org.springframework.security.web.server.ui.LoginPageGeneratingWebFilter;
 
 //esta notacion permite crear aspectos de la clase para lograr configurarla
 @Configuration
@@ -54,7 +55,7 @@ public class DatabaseWebSecurity extends WebSecurityConfigurerAdapter {
 				.anyRequest().authenticated()
 					
 				// este metodo sirve para decir que el formulario de login no requiere autenticacion
-				.and().formLogin().permitAll();
+				.and().formLogin().loginPage("/login").permitAll();
 		}
 		
 		@Bean
