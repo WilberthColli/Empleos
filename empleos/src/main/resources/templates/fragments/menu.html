@@ -24,6 +24,8 @@
     <a class="btn btn-primary" th:href="@{/index}">Ingresar</a>&nbsp;
     <!-- Boton para registrar un usuario -->
      <a class="btn btn-primary" th:href="@{/signup}">Registrarse</a>&nbsp;
+     <!-- Para mostrar bienvenido a los usuarios con su nombre -->
+     <span th:if="${session.usuario != null}" class="text-light" th:text="'Bienvenido ' + ${session.usuario.nombre}"></span>&nbsp;
      <!-- boton para cerrar sesion del usuario -->
      <a class="btn btn-primary" th:href="@{/logout}">Salir</a>&nbsp;
   </div>
