@@ -1,4 +1,4 @@
-package net.itinajero.api;
+package com.will.api;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
